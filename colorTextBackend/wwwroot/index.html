@@ -1,13 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Ansley — IT Professional</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<button type="button" id="encodeButton">Encode</button>
-<button type="button" id="decodeButton">Decode</button>
-<input type="text" id="encodeInput">
-<input type="text" id="decodeInput">
-<div class="textDisplay" id="decodeOutput"></div>
-<div id="swatchDisplay" class="swatchContainer"></div>
-<script src="js/encoder.js"></script>
+
+    <nav id="navbar">
+        <span class="nav-logo">John Ansley</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#stats">Git Stats</a>
+            <a href="#encoder">Encoder</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="section-label">About</div>
+            <div class="hero">
+                <div class="photo-placeholder">
+                    <span>photo<br>coming<br>soon</span>
+                </div>
+                <div class="hero-text">
+                    <h1>John Ansley</h1>
+                    <div class="hero-title">IT Professional</div>
+                    <p>
+                        Over 25 years of hands-on break/fix experience, including 3 years in professional environments 
+                        and a year running my own IT business. Currently pursuing A+, Network+, and CCNA simultaneously 
+                        while building full-stack projects in C# and ASP.NET. Passionate about systems, networks, and software — 
+                        with the kind of obsession that makes it hard to tell where work ends and everything else begins.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume" class="section">
+            <div class="section-label">Resume</div>
+            <div class="resume-grid">
+
+                <div class="resume-block">
+                    <h3>Experience</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Communications Technician — Comcast</div>
+                        <div class="resume-item-sub">2 Years · SE Region</div>
+                        <div class="resume-item-detail">
+                            Scored 96% on the Comm Tech assessment in under 4 minutes. 
+                            Achieved 98% on the Comm Tech 3 assessment (Ethernet & POTS) one year later, again in under 4 minutes. 
+                            Ranked Top 5 individual technicians in the SE region of the US in 2016.
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Owner & Technician — Independent IT Business</div>
+                        <div class="resume-item-sub">2014 · 1 Year</div>
+                        <div class="resume-item-detail">
+                            Operated a sole-proprietor IT break/fix business providing hardware diagnostics, 
+                            repair, and support services to residential and small business clients.
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Personal Break/Fix Experience</div>
+                        <div class="resume-item-sub">25+ Years</div>
+                        <div class="resume-item-detail">
+                            Extensive self-directed experience in hardware repair, diagnostics, 
+                            networking, and systems troubleshooting across a wide range of platforms and environments.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-block">
+                    <h3>Skills</h3>
+                    <div class="skills-group">
+                        <div class="skills-group-label">Development</div>
+                        <div class="skill-pills">
+                            <span class="pill">C#</span>
+                            <span class="pill">ASP.NET</span>
+                            <span class="pill">C++</span>
+                            <span class="pill">HTML</span>
+                            <span class="pill">CSS</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">REST APIs</span>
+                            <span class="pill">Unit Testing</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <div class="skills-group-label">Networking & Systems</div>
+                        <div class="skill-pills">
+                            <span class="pill">TCP/IP</span>
+                            <span class="pill">Ethernet</span>
+                            <span class="pill">POTS</span>
+                            <span class="pill">Break/Fix</span>
+                            <span class="pill">Hardware Diagnostics</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <div class="skills-group-label">Certifications</div>
+                        <div class="skill-pills">
+                            <span class="pill pill-progress">A+ (In Progress)</span>
+                            <span class="pill pill-progress">Network+ (In Progress)</span>
+                            <span class="pill pill-progress">CCNA (In Progress)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GIT STATS -->
+        <section id="stats" class="section">
+            <div class="section-label">Git Stats</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">—</div>
+                    <div class="stat-label">Commits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">—</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">—</div>
+                    <div class="stat-label">Contributions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">—</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENCODER -->
+        <section id="encoder" class="section">
+            <div class="section-label">Text Encoder</div>
+            <p class="encoder-description">
+                Type any text below and watch it encode into a sequence of colors. 
+                Each color represents three characters of input. Click a swatch to decode it back.
+            </p>
+            <div class="encoder-area">
+                <div class="encoder-row">
+                    <input type="text" id="encodeInput" placeholder="Type something to encode..." />
+                    <button type="button" id="encodeButton">Encode</button>
+                </div>
+                <div id="swatchDisplay" class="swatch-container"></div>
+                <div class="encoder-row">
+                    <input type="text" id="decodeInput" placeholder="Or paste hex codes to decode..." />
+                    <button type="button" id="decodeButton">Decode</button>
+                </div>
+                <div id="decodeOutput" class="decode-output"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="section-label">Contact</div>
+            <div class="contact-form">
+                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Email" />
+                <textarea placeholder="Message"></textarea>
+                <button type="button">Send message</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Built with ASP.NET · John Ansley · 2025</span>
+    </footer>
+
+    <script src="js/encoder.js"></script>
+
 </body>
+</html>
