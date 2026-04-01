@@ -25,11 +25,24 @@ encodeButton.addEventListener("click", async () => {
 });
 
 decodeButton.addEventListener("click", async () => {
+    let colorPayload;
+    if(decodeInput.value != "")
+    {
+        colorPayload = decodeInput.value.split(",");
+        
+    }
+    else
+    {
+        colorPayload = currentColors;
+    }
     const response = await fetch("/api/encoder/decode", {
         method:"POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({colors: currentColors})
+        body: JSON.stringify({colors: colorPayload})
+        
     });
-    const data = await response.json();
+    const data = await response.text();
+    let decodedText = data;
     console.log(data);
+    decodeOutput.innerHTML = decodedText;
 });
