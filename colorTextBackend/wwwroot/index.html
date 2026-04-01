@@ -25,9 +25,7 @@
         <section id="about" class="section">
             <div class="section-label">About</div>
             <div class="hero">
-                <div class="photo-placeholder">
-                    <span>photo<br>coming<br>soon</span>
-                </div>
+                <img src="images/my_photo.jpg" alt="John Ansley" class="profile-photo"/>
                 <div class="hero-text">
                     <h1>John Ansley</h1>
                     <div class="hero-title">IT Professional</div>
@@ -118,20 +116,20 @@
             <div class="section-label">Git Stats</div>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-num">—</div>
-                    <div class="stat-label">Commits</div>
+                    <div class="stat-num" id="reposNum">—</div>
+                    <div class="stat-label" id="repos">Public Repos</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-num">—</div>
-                    <div class="stat-label">Repositories</div>
+                    <div class="stat-num" id="followersNum">—</div>
+                    <div class="stat-label" id="followers">Followers</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-num">—</div>
-                    <div class="stat-label">Contributions</div>
+                    <div class="stat-num" id="followingNum">—</div>
+                    <div class="stat-label" id="following">Following</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-num">—</div>
-                    <div class="stat-label">Languages</div>
+                    <div class="stat-num" id="createdAtNum">—</div>
+                    <div class="stat-label" id="createdAt">Member Since</div>
                 </div>
             </div>
         </section>
@@ -173,7 +171,7 @@
     <footer>
         <span>Built with ASP.NET · John Ansley · 2025</span>
     </footer>
-
+    <script src="js/statsHandler.js"></script>
     <script src="js/encoder.js"></script>
 
 </body>
