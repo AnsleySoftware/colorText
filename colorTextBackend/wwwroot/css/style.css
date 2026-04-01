@@ -1,0 +1,7 @@
+.swatchContainer{
+    display: flex;
+}
+.swatch {
+    width: 30px;
+    height: 30px;
+}
