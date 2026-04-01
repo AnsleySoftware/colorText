@@ -15,6 +15,8 @@ namespace colorTextBackend.Controllers
             return Ok(encodedText);
         }
 
+
+
         [HttpPost("decode")]
         public IActionResult DecodeColors([FromBody] DecodeRequest request)
         {

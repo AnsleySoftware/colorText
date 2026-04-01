@@ -5,6 +5,10 @@ const decodeButton = document.getElementById("decodeButton")
 const decodeInput = document.getElementById("decodeInput");
 const decodeOutput = document.getElementById("decodeOutput");
 let currentColors = [];
+
+
+
+
 encodeButton.addEventListener("click", async () => {
     const response = await fetch("/api/encoder/encode", {
         method: "POST",
@@ -23,6 +27,9 @@ encodeButton.addEventListener("click", async () => {
     }
 
 });
+
+
+
 
 decodeButton.addEventListener("click", async () => {
     let colorPayload;
