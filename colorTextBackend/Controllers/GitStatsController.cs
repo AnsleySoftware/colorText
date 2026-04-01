@@ -20,6 +20,20 @@ namespace colorTextBackend.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        
+        [HttpGet("gitstats")]
+        public async Task<IActionResult> GetGitStats()
+        {
+            if (_cache.TryGetValue("gitStats", out string cachedData))
+            {
+                return Ok(cachedData);
+            }
+
+            HttpClient client = _httpClientFactory.CreateClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "colorTextBackend");
+            var response = await client.GetAsync(gitUsername);
+            string data = await response.Content.ReadAsStringAsync();
+            _cache.Set("gitStats", data, TimeSpan.FromHours(24));
+            return Ok(data);
+        }
     }
 }
