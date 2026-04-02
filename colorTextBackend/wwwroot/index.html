@@ -152,6 +152,10 @@
                     <button type="button" id="decodeButton">Decode</button>
                 </div>
                 <div id="decodeOutput" class="decode-output"></div>
+                <div id="exampleSwatch1" class="swatch-container"></div>
+                <div id="exampleSwatch2" class="swatch-container"></div>
+                <div id="exampleSwatch3" class="swatch-container"></div>
+                <div id="exampleSwatch4" class="swatch-container"></div>
             </div>
         </section>
 
@@ -159,10 +163,10 @@
         <section id="contact" class="section">
             <div class="section-label">Contact</div>
             <div class="contact-form">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <textarea placeholder="Message"></textarea>
-                <button type="button">Send message</button>
+                <input id="senderName" type="text" placeholder="Name" />
+                <input id="emailAddress" type="text" placeholder="Email" />
+                <textarea id="messageBody" placeholder="Message"></textarea>
+                <button id="sendButton" type="button">Send message</button>
             </div>
         </section>
 
@@ -173,6 +177,7 @@
     </footer>
     <script src="js/statsHandler.js"></script>
     <script src="js/encoder.js"></script>
+    <script src="js/ContactHandler.js"></script>
 
 </body>
 </html>
