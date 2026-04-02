@@ -5,7 +5,7 @@ namespace colorTextBackend
 {
     public class TextDecoder
     {
-        //First thing we need is a reference to the encoder.
+        
         
         List<string> colorsToDecode = new List<string>();
 
