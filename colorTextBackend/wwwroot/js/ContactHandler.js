@@ -19,7 +19,11 @@ sendButton.addEventListener("click", async() => {
                         email: emailAddress.value,
                         message: messageBody.value
                     })
+                
                 });
+                messageBody.value = "";
+                emailAddress.value = "";
+                senderName.value = "";
             } else {
                 alert("Please enter a name between 1 and 23 characters long.")
             }

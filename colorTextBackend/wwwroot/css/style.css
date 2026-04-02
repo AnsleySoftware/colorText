@@ -300,6 +300,22 @@ main {
     min-height: 2.5rem;
 }
 
+.exampleSwatchContainer {
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    border-radius: 8px;
+    border: 2px solid rgba(0,0,0,0.5);
+    cursor: pointer;    
+    transition: transform 0.15s ease;
+    margin-bottom: 4px;
+}
+.exampleSwatchContainer:hover {
+    transform: scale(1.02);
+}
+
 .swatch {
     width: 48px;
     height: 48px;
@@ -307,6 +323,14 @@ main {
     border: 1px solid rgba(0,0,0,0.08);
     cursor: pointer;
     transition: transform 0.15s ease;
+}
+
+.exampleSwatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    margin: 2px;
 }
 
 .swatch:hover {

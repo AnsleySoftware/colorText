@@ -10,11 +10,14 @@ let currentColors = [];
 
 
 encodeButton.addEventListener("click", async () => {
+    console.log("Encode clicked");
     const response = await fetch("/api/encoder/encode", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ input: encodeInput.value})
     });
+    console.log("clearing field");
+    encodeInput.value = "";
     const data = await response.json();
     currentColors = data;
     swatchDisplay.innerHTML = "";
@@ -25,6 +28,7 @@ encodeButton.addEventListener("click", async () => {
         colorDiv.classList.add("swatch");
         colorDiv.style.backgroundColor = color;
     }
+    
 
 });
 
@@ -36,7 +40,8 @@ decodeButton.addEventListener("click", async () => {
     if(decodeInput.value != "")
     {
         colorPayload = decodeInput.value.split(",");
-        
+        console.log("clearing field");
+        decodeInput.value = "";
     }
     else
     {
@@ -52,4 +57,5 @@ decodeButton.addEventListener("click", async () => {
     let decodedText = data;
     console.log(data);
     decodeOutput.innerHTML = decodedText;
+    
 });
