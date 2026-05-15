@@ -7,4 +7,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/out .
 EXPOSE 8080
+ENV ASPNETCORE_HTTP_PORTS=8080
 ENTRYPOINT ["dotnet", "colorTextBackend.dll"]
